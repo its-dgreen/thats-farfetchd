@@ -28,8 +28,19 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-anchor`,
+      options: {
+        rss: 'https://anchor.fm/s/429c87a8/podcast/rss',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`raleway`],
+        display: 'swap',
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
 };
