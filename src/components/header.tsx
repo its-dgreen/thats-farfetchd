@@ -13,7 +13,7 @@ const Header = () => (
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
+        maxWidth: 1020,
       }}
     >
       <h1 style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>

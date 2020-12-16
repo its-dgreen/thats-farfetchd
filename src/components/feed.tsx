@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import ReactAudioPlayer from 'react-audio-player';
 import styled from 'styled-components';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 const podcastQuery = graphql`
   query {
@@ -49,11 +50,7 @@ const Podcast = () => {
       {data.podcast.edges.map((episode: Episode) => (
         <EpisodeWrapper key={episode.id}>
           <h3>Episode: {episode.node.title}</h3>
-          <ReactAudioPlayer
-            src={episode.node.enclosure.url}
-            controls
-            preload="none"
-          />
+          <AudioPlayer src={episode.node.enclosure.url} preload="none" />
           <div dangerouslySetInnerHTML={{ __html: episode.node.content }} />
         </EpisodeWrapper>
       ))}
