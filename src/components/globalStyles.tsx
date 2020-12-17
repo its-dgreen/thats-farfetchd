@@ -1,4 +1,8 @@
-html {
+import React from 'react';
+import { createGlobalStyle } from 'styled-components';
+
+const Global = createGlobalStyle`
+  html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
@@ -27,3 +31,11 @@ body {
     font-size: 100%;
   }
 }
+
+`;
+
+const GlobalStyles = () => {
+  return <Global />;
+};
+
+export default GlobalStyles;

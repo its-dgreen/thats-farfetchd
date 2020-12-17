@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Header from './header';
-import './layout.css';
+import GlobalStyles from './globalStyles';
 
 interface Props {
   children?: ReactNode;
@@ -35,6 +35,7 @@ const Layout = ({ children }: Props) => {
 
   return (
     <>
+      <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <MainWrapper>{children}</MainWrapper>
     </>
