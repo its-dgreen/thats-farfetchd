@@ -13,7 +13,7 @@ interface Props {
 const MainWrapper = styled.main`
   margin: 0 auto;
   max-width: 50%;
-  padding: 0.3rem 1.0875rem 1.45rem;
+  padding: 1.45rem 1.0875rem 1.45rem;
   background: #daded4;
   margin-bottom: 5vh;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
