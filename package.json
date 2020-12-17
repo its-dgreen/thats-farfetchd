@@ -50,12 +50,12 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "rm -rf .cache && gatsby build --prefix-paths && gh-pages -d public",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "commit": "git add . && cz"
   },
   "repository": {
